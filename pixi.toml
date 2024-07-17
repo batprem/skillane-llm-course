@@ -1,0 +1,34 @@
+[project]
+name = "skillane-prem-llm"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["prem <prem.ch@ku.th>"]
+channels = ["conda-forge"]
+platforms = ["osx-64", "osx-arm64"]
+
+[tasks]
+notebook = "jupyter notebook"
+
+[dependencies]
+python = "3.11.*"
+ollama = ">=0.1.17,<0.2"
+jupyter = ">=1.0.0,<1.1"
+notebook = "<7"
+pip = ">=24.0,<25"
+scipy = ">=1.14.0,<1.15"
+black = ">=24.4.2,<24.5"
+
+[target.osx-64.pypi-dependencies]
+ollama = "*"
+numpy = { version = "*" }
+matplotlib = "*"
+
+[target.osx-arm64.pypi-dependencies]
+numpy = {version = "*"}
+
+[pypi-dependencies]
+black = "*"
+ollama = "*"
+vectordb = "*"
+pandas = "*"
+retry = "*"

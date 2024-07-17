@@ -1,0 +1,27 @@
+[project]
+name = "skillane"
+version = "0.1.0"
+description = "Add a short description here"
+authors = [{name = "prem", email = "prem.ch@ku.th"}]
+requires-python = ">= 3.11"
+dependencies = ["scipy", "ollama", "matplotlib", "vectordb", "numpy<2", "retry"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["osx-64"]
+
+[tool.pixi.pypi-dependencies]
+skillane = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+notebook = "jupyter notebook"
+
+[tool.pixi.dependencies]
+python = "3.11.*"
+ollama = ">=0.1.17,<0.2"
+jupyter = ">=1.0.0,<1.1"
+notebook = "<7"
