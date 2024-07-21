@@ -3,7 +3,7 @@ name = "skillane"
 version = "0.1.0"
 description = "Add a short description here"
 authors = [{name = "prem", email = "prem.ch@ku.th"}]
-requires-python = ">= 3.11"
+requires-python = ">= 3.10"
 dependencies = ["scipy", "ollama", "matplotlib", "vectordb", "numpy<2", "retry"]
 
 [build-system]
