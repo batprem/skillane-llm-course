@@ -21,7 +21,7 @@ skillane = { path = ".", editable = true }
 notebook = "jupyter notebook"
 
 [tool.pixi.dependencies]
-python = "3.11.*"
+python = ">=3.10"
 ollama = ">=0.1.17,<0.2"
 jupyter = ">=1.0.0,<1.1"
 notebook = "<7"
